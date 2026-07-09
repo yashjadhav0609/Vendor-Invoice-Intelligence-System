@@ -29,6 +29,7 @@ This project implements an **end-to-end machine learning system** designed to su
 <h3>1. Fright Cost Prediction (Regression)</h3>
 
 **Objective:** Predict freight cost for a vendro invoice using quantity and invoice value, to improve budgeting and cost management.
+
 Why it matters:
 - It's a non-trivial component of landed cost.
 - Poor freight estimates distort margin and inventory management.
