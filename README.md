@@ -1,10 +1,8 @@
 
 # 🧾Vendor Invoice Intelligence System
+
 **Freight Cost Prediction & Invoice Risk Flagging**
 
-_Vendor Invoice Intelligence System is an AI-powered analytics application that predicts freight costs and identifies high-risk vendor invoices to improve financial decision-making and operational efficiency._
-
----
 
 ## 📌 Table of Contents
 - <a href="#overview">Overview</a>
@@ -28,7 +26,7 @@ This project implements an **end-to-end machine learning system** designed to su
 ---
 <h2><a class="anchor" id="business-objective"></a>🎯 Business Objective</h2>
 
-1. Fright Cost Prediction (Regression)
+<h3>1. Fright Cost Prediction (Regression)</h3>
 
 **Objective:** Predict freight cost for a vendro invoice using quantity and invoice value, to improve budgeting and cost management.
 Why it matters:
@@ -38,7 +36,7 @@ Why it matters:
 
 ![Freight cost](Images/Freight_cost_prediction.png)
 
-2.Invoice Risk Flagging (Classification)
+<h3>2. Invoice Risk Flagging (Classification)</h3> 
 
 **Objective:** Predict whether a vendor invoice should be flagged for manual approval due to a abnormal cost, freight, or delivery patterns, in order to reduce financial risk, improve operational efficiency.
 
@@ -51,8 +49,6 @@ Why it matters:
 
 ---
 <h2><a class="anchor" id="data-source"></a>📁 Data Sources</h2>
-
-- CSV file located in `/data/` folder.
 
 Data is stored in a relational SQLite database (inventory.db) with the following tables:
 - vendor_invoice - Invoice-level financial and timing data
@@ -120,10 +116,7 @@ A Streamlit application demonstrates the complete pipeline:
 ```
 Vendor-Invoice-Intelligence-Portal/
 │
-├── app.py                          # Streamlit web application
-│
-├── data/
-│   ├── inventory.db                # SQLite database
+├── app.py                          # Streamlit web application              
 │ 
 ├── Images/ 
 │   ├── Freight_cost_prediction
@@ -164,7 +157,6 @@ Vendor-Invoice-Intelligence-Portal/
 
 ```bash
 git clone https://github.com/yashjadhav0609/Vendor-Invoice-Intelligence-System.git
-
 ```
 
 2. Install the required dependencies:
@@ -173,18 +165,21 @@ git clone https://github.com/yashjadhav0609/Vendor-Invoice-Intelligence-System.g
 pip install -r requirements.txt
 ```
 
-3. Train the machine learning models (optional if pre-trained models are already available):
-
-```bash
-python freight_cost_prediction/train.py
-python invoice_flag_prediction/train.py
-```
-
-4. Launch the Streamlit application:
+3. Launch the Streamlit application:
 
 ```bash
 streamlit run app.py
 ```
-5. Open the local URL displayed in the terminal to access the Vendor Invoice Intelligence System and start making predictions.
+
+4. Open the local URL displayed in the terminal (typically `http://localhost:8501`) to access the Vendor Invoice Intelligence Portal.
+
+5. Enter invoice details and use the dashboard to:
+
+   * Predict freight costs
+   * Identify invoices that require manual approval
+   * Support finance and procurement decision-making
+
+**Note:** Pre-trained machine learning models are included in the repository, allowing the application to run without retraining.
+
 
 ---
